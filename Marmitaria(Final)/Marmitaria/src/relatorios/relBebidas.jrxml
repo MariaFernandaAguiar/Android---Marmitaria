@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relBebidas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c0b51886-ee8d-4ce0-bc89-56d05a714190">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from tb_bebida]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descricao" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="225" y="14" width="145" height="33" uuid="e929c0aa-d2f7-4cab-98a3-ff36be3156ab"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Marmitária]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="225" y="47" width="145" height="22" forecolor="#FF9900" uuid="dc4b357d-2bd6-4c1e-bebd-d490463105fa"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Relatório Bebidas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement style="SubTitle" x="350" y="27" width="148" height="27" uuid="c75a661a-c9ab-4d70-a8c5-d563a5ae3eab"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Descrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="79" y="27" width="26" height="27" uuid="efbbd4c1-d12e-4ef1-8f96-84fecdcd6651"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="89" y="3" width="100" height="20" uuid="e2b9e153-d20a-4275-b45f-9550e3fc2343"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="3" width="100" height="20" uuid="9a5cd83f-fbeb-4d46-8f3a-a771bce1bb7d"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="14" y="11" width="197" height="20" uuid="9bb7dffa-03cb-4774-b796-dc32636a9800"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Column header" x="463" y="11" width="80" height="20" uuid="dc8f97fe-f9bd-4db9-b88a-f7dae369f521"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

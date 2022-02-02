@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="22e5afcd-86ab-4942-bc47-a7e8ecf16c59">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement style="SubTitle" x="135" y="28" width="200" height="22" uuid="0366d072-af68-4224-95f2-50f90a2958f2"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Relatórios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="227" y="1" width="263" height="33" uuid="3c55f527-3fc5-46fa-85f0-79f0941ec4a4"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Marmitária]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<image>
+				<reportElement x="-113" y="-211" width="591" height="355" uuid="c13f4cc3-402d-4c7e-af4c-4ae34f58bd10"/>
+				<imageExpression><![CDATA["C:\\Users\\Maria Fernanda\\Documents\\Maria Fernanda\\IFMS\\Web\\Web 2\\Marmitaria\\img\\GoodFood-removebg-preview.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement style="SubTitle" x="197" y="0" width="506" height="24" forecolor="#FF9933" uuid="e542364a-e290-453a-bb41-b51d5341be9c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Relatórios Alimentos]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
